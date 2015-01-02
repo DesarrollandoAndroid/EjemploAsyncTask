@@ -81,7 +81,7 @@ public class MainActivity extends ActionBarActivity {
         protected void onProgressUpdate(Integer... values) {
             mProgressDialog.setProgress(values[0]);
         }
-        
+
         @Override
         protected void onPostExecute(Integer integer) {
             mProgressDialog.dismiss();
