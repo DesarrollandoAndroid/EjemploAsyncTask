@@ -79,7 +79,10 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         protected void onProgressUpdate(Integer... values) {
-            mProgressDialog.setProgress(values[0]);
+            super.onProgressUpdate(values);
+            if(mProgressDialog.getProgress() < mProgressDialog.getMax()) {
+                mProgressDialog.setProgress(values[0]);
+            }
         }
 
         @Override
